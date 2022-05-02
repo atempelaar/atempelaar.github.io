@@ -5,64 +5,107 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Raleway", Arial, sans-serif}
-.w3-row img {margin-bottom: -8px}
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
 </style>
 </head>
 <body>
 
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Shop</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+  </div>
+</nav>
+
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
 
-  <!-- Header -->
-  <header class="w3-container w3-xlarge w3-padding-24">
-    <a href="#" class="w3-left w3-button w3-white">MY ART</a>
-    <a href="#about" class="w3-right w3-button w3-white">About</a>
-  </header>
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>PHOTOLIO</b></h1>
+  <p><b>A template made by w3.css for photographers.</b></p>
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+</header>
+</div>
 
-  <!-- Photo Grid -->
-  <div class="w3-row">
-    <div class="w3-half">
-      <img src="/images/colorpainting.jpg" style="width:100%">
-      <img src="/images/bar.jpg" style="width:100%">
-      <img src="/images/ocell2.jpg" style="width:100%">
-    </div>
-
-    <div class="w3-half">
-      <img src="/images/rocksculpture.jpg" style="width:100%">
-      <img src="/images/tortuge.jpg" style="width:100%">
-    </div>
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="/images/ocell2.jpg" style="width:100%">
+    <img src="/images/colorpainting.jpg" style="width:100%">
+    <img src="/images/horse.jpg" style="width:100%">
+    <img src="/images/tortuge.jpg" style="width:100%">
+    <img src="/images/painted_rose.jpg" style="width:100%">
+    <img src="/images/elephant.jpg" style="width:100%">
   </div>
-  
+
+  <div class="w3-third">
+    <img src="/images/hedgehog.jpg" style="width:100%">
+    <img src="/images/vase.jpg" style="width:100%">
+    <img src="/images/cabeza.jpg" style="width:100%">
+    <img src="/images/horserider.jpg" style="width:100%">
+    <img src="/images/bar.jpg" style="width:100%">
+    <img src="/images/ocell1.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="/images/lions.jpg" style="width:100%">
+    <img src="/images/greenbird.jpg" style="width:100%">
+    <img src="/images/elephant.jpg" style="width:100%">
+    <img src="/images/ocell1.jpg" style="width:100%">
+    <img src="/images/colorpainting.jpg" style="width:100%">
+  </div>
+</div>
+
 <!-- End Page Content -->
 </div>
 
-<!-- Footer / About Section -->
-<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
-  <h2>About</h2>
-  <img src="/images/hedgehog.jpg" class="w3-image w3-padding-32" width="300" height="300">
-  <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
-    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
-    <div class="w3-section">
-      <label><b>Name</b></label>
-      <input class="w3-input w3-border" type="text" required name="Name">
-    </div>
-    <div class="w3-section">
-      <label><b>Email</b></label>
-      <input class="w3-input w3-border" type="text" required name="Email">
-    </div>
-    <div class="w3-section">
-      <label><b>Message</b></label>
-      <input class="w3-input w3-border" required name="Message">
-    </div>
-    <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
-  </form>
-  <br>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
  
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
 </body>
 </html>
